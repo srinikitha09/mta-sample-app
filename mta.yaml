@@ -7,7 +7,11 @@ modules:
     path: srv
     parameters:
       memory: 1024M
-    provides:
-      - name: srv_api
-        properties:
-          url: ${default-url}
+      disk-quota: 256M
+    build-parameters:
+      builder: maven
+      maven-opts:
+        command: [ clean, install ]
+        profiles:
+          - application
+      build-result: application/target/*.war

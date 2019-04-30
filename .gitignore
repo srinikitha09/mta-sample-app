@@ -13,3 +13,6 @@
 **/.DS_Store
 docs/.sass-cache/
 docs/_site/
+package-lock.json
+.mta
+*.mtar
