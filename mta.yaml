@@ -1,0 +1,13 @@
+ID: address-manager
+_schema-version: "2.1"
+version: 0.0.1
+modules:
+  - name: address-manager-srv
+    type: java
+    path: srv
+    parameters:
+      memory: 1024M
+    provides:
+      - name: srv_api
+        properties:
+          url: ${default-url}
