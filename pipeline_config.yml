@@ -2,10 +2,10 @@ general:
   productiveBranch: 'infrastructure-integration-test-cap'
   collectTelemetryData: false
 steps:
-  cloudFoundryDeploy:
-    dockerImage: localhost:5000/ppiper/cf-cli
-  mtaBuild:
-    dockerImage: localhost:5000/ppiper/mta-archive-builder
+#  cloudFoundryDeploy:
+#    dockerImage: localhost:5000/ppiper/cf-cli
+#  mtaBuild:
+#    dockerImage: localhost:5000/ppiper/mta-archive-builder
 stages:
   productionDeployment:
     cfTargets:
