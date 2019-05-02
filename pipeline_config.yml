@@ -13,7 +13,6 @@ stages:
         space: 'dev'
         apiEndpoint: 'https://api.cf.eu10.hana.ondemand.com'
         appName: 'devops-docker-images-IT-cap'
-        manifest: 'manifest.yml'
         credentialsId: 'devops-docker-images-IT-cf'
     appUrls:
       - url: 'https://devops-docker-images-it-cap.cfapps.eu10.hana.ondemand.com'
