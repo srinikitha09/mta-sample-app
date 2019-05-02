@@ -15,7 +15,8 @@
     "scripts": {
         "start": "cds run",
         "build": "cds build/all --clean",
-        "deploy": "cds deploy"
+        "deploy": "cds deploy",
+        "ci-smoke": "ls"
     },
     "cds": {
         "odata": {
