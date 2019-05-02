@@ -7,6 +7,7 @@ import static org.junit.Assert.*;
 public class IntegrationTest {
     @Test
     public void test() {
+        HelloWorld.main(new String[]{"Hello", "World"});
         assertTrue(true);
     }
 }
