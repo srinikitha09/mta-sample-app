@@ -2,10 +2,10 @@ general:
   productiveBranch: 'infrastructure-integration-test-cap'
   collectTelemetryData: false
 steps:
-#  cloudFoundryDeploy:
-#    dockerImage: localhost:5000/ppiper/cf-cli
-#  mtaBuild:
-#    dockerImage: localhost:5000/ppiper/mta-archive-builder
+  cloudFoundryDeploy:
+    dockerImage: localhost:5000/ppiper/cf-cli
+  mtaBuild:
+    dockerImage: localhost:5000/ppiper/mta-archive-builder
 stages:
   productionDeployment:
     cfTargets:
@@ -14,6 +14,3 @@ stages:
         apiEndpoint: 'https://api.cf.eu10.hana.ondemand.com'
         appName: 'devops-docker-images-IT-cap'
         credentialsId: 'devops-docker-images-IT-cf'
-    appUrls:
-      - url: 'https://devops-docker-images-it-cap.cfapps.eu10.hana.ondemand.com'
-        credentialId: 'devops-docker-images-IT-cf'
