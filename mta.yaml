@@ -12,6 +12,4 @@ modules:
       builder: maven
       maven-opts:
         command: [ clean, install ]
-        profiles:
-          - application
-      build-result: application/target/*.war
+      build-result: target/*.war
