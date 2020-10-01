@@ -16,7 +16,9 @@ node(){
       consumerTestsSpace = "consr-test-${id}"
 
       cloudFoundryCreateSpace script: this, cfSpace: consumerTestsSpace
-      cloudFoundryDeploy script:this, deployTool: 'mtaDeployPlugin', space: consumerTestsSpace
+      cloudFoundryDeploy script:this,
+                         deployTool: 'mtaDeployPlugin',
+                         cloudFoundry:[ space: consumerTestsSpace]
       cloudFoundryDeleteSpace script: this, cfSpace: consumerTestsSpace
   }
 }
