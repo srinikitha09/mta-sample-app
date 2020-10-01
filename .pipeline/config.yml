@@ -1,13 +1,13 @@
 general:
   cfApiEndpoint: "https://api.cf.eu10.hana.ondemand.com"
-  cfOrg: "piper"
+  cfOrg: "CLOUDCI_cicddev"
 steps:
   mtaBuild:
     buildTarget: 'CF'
   cloudFoundryCreateSpace:
-    cfCredentialsId: "cf_deploy"
+    cfCredentialsId: "cfDeployFactory"
   cloudFoundryDeploy:
     cloudFoundry:
-      credentialsId: 'cf_deploy'
+      credentialsId: 'cfDeployFactory'
   cloudFoundryDeleteSpace:
-    cfCredentialsId: "cf_deploy"
+    cfCredentialsId: "cfDeployFactory"
