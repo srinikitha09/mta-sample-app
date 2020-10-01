@@ -5,9 +5,7 @@ general:
 steps:
   mtaBuild:
     buildTarget: 'CF'
-  cloudFoundryCreateSpace:
   cloudFoundryDeploy:
     cloudFoundry:
       credentialsId: 'cfDeployFactory'
-  cloudFoundryDeleteSpace:
-    cfCredentialsId: "cfDeployFactory"
+
