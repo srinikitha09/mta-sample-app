@@ -12,7 +12,12 @@ node(){
   }
 
   stage('Deploy')   {
-      cloudFoundryDeploy script:this, deployTool: 'mtaDeployPlugin'
+      def id = new Date().getTime()
+      consumerTestsSpace = "consr-test-${id}"
+
+      cloudFoundryCreateSpace script: this, cfSpace: consumerTestsSpace
+      cloudFoundryDeploy script:this, deployTool: 'mtaDeployPlugin', space: consumerTestsSpace
+      cloudFoundryDeleteSpace script: this, cfSpace: consumerTestsSpace
   }
 }
 

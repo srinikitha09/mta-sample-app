@@ -1,9 +1,16 @@
 steps:
   mtaBuild:
     buildTarget: 'CF'
+  cloudFoundryCreateSpace:
+    cfCredentialsId: "cf_deploy"
+    cfApiEndpoint: "https://api.cf.eu10.hana.ondemand.com"
+    cfOrg: "piper"
   cloudFoundryDeploy:
     cloudFoundry:
       credentialsId: 'cf_deploy'
       apiEndpoint: 'https://api.cf.eu10.hana.ondemand.com'
       org: 'piper'
-      space: 'infra-testing'
+  cloudFoundryDeleteSpace:
+    cfCredentialsId: "cf_deploy"
+    cfApiEndpoint: "https://api.cf.eu10.hana.ondemand.com"
+    cfOrg: "piper"
