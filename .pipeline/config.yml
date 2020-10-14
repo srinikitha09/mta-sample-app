@@ -1,7 +1,7 @@
 general:
   cfApiEndpoint: "https://api.cf.eu10.hana.ondemand.com"
-  cfOrg: "CLOUDCI_cicddev"
-  cfCredentialsId: "cfDeployFactory"
+  cfOrg: "piper"
+  cfCredentialsId: "piper-crd"
 steps:
   mtaBuild:
     buildTarget: 'CF'
